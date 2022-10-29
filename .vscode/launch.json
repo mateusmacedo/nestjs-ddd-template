@@ -1,0 +1,20 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+	  {
+		"name": "Sync-query: Attach debugger",
+		"type": "node",
+		"request": "attach",
+		"address": "localhost",
+		"port": 9229,
+		"localRoot": "${workspaceFolder}",
+		"remoteRoot": "/usr/src/app",
+		"protocol": "inspector",
+		"restart": true,
+		"skipFiles": [
+		  "<node_internals>/**",
+		  "node_modules/**"
+		],
+	  },
+	]
+  }

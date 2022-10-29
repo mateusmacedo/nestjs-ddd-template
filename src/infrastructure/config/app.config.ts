@@ -4,6 +4,7 @@ import Joi from 'joi'
 export const appConfig = () =>
   registerAs('app', () => {
     const values = {
+      env: process.env.NODE_ENV,
       name: process.env.APP_NAME,
       description: process.env.APP_DESCRIPTION,
       version: process.env.APP_VERSION,
@@ -13,6 +14,7 @@ export const appConfig = () =>
       docsUri: process.env.APP_DOCS_URI
     }
     const schema = Joi.object({
+      env: Joi.string().valid('development', 'production', 'test', 'provision').required(),
       name: Joi.string().required(),
       description: Joi.string().required(),
       version: Joi.string().required(),
