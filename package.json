@@ -1,20 +1,20 @@
 {
-  "name": "confirmation-code-api",
-  "version": "0.0.0",
-  "description": "",
+  "name": "nestjs-ddd-template",
+  "version": "0.1.0",
+  "description": "Nestjs template for DDD",
   "author": {
     "name": "Mateus Macedo Dos Anjos",
-    "email": "mateus.anjos@fretebras.com.br"
+    "email": "macedodosanjosmateus@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://repo.git"
+    "url": "https://github.com/mateusmacedo/nestjs-ddd-template.git"
   },
   "bugs": {
-    "url": "https://repo/issues",
-    "email": "mateus.anjos@fretebras.com.br"
+    "url": "https://github.com/mateusmacedo/nestjs-ddd-template/issues",
+    "email": "macedodosanjosmateus@gmail.com"
   },
-  "private": true,
+  "private": false,
   "license": "UNLICENSED",
   "scripts": {
     "prebuild": "rimraf dist",
@@ -23,7 +23,7 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "test": "export NODE_ENV=test && ts-node-dev -r tsconfig-paths/register --transpile-only --clear --ignore-watch node_modules node_modules/.bin/jest --passWithNoTests --runInBand --no-cache --detectOpenHandles --forceExit",
     "test:unit": "npm run test -- --config ./jest-unit.config.js",
-    "test:staged": "npm run test -- --config ./jest-unit.config.js --findRelatedTests",
+    "test:staged": "npm run test -- --findRelatedTests",
     "test:watch": "npm run test -- --watch --config ./jest-unit.config.js",
     "test:cov": "npm run test -- --coverage --config ./jest-unit.config.js",
     "test:e2e": "npm run test -- --config ./jest-e2e.config.js",
@@ -31,7 +31,8 @@
     "start:debug": "export NODE_ENV=development && ts-node-dev --respawn --transpile-only --inspect=0.0.0.0:9229 --ignore-watch node_modules -r tsconfig-paths/register ./src/main.ts",
     "start:prod": "export NODE_ENV=production && node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-    "lint:staged": "eslint --fix",    
+    "lint:staged": "eslint --fix",
+    "prepare": "husky install",
     "release": "standard-version",
     "changelog": "standard-version && auto-changelog -p -u --commit-limit false --hide-credit --template changelog-template.hbs",
     "changelog:minor": "standard-version --release-as minor && auto-changelog -p -u --commit-limit false --hide-credit --template changelog-template.hbs",

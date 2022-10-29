@@ -1,5 +1,6 @@
 module.exports = {
   rootDir: '.',
+  testMatch: ['**/*.spec.ts', '**/*.e2e-spec.ts'],
   moduleNameMapper: {
     '@/test/(.*)': '<rootDir>/test/$1',
     '@/(.*)': '<rootDir>/src/$1'
@@ -19,6 +20,7 @@ module.exports = {
   collectCoverageFrom: [
     '<rootDir>/src/**/*.{js,jsx,ts,tsx}',
     '!<rootDir>/src/infrastructure/migrations/**',
+    '!<rootDir>/src/infrastructure/modules/**',
     '!<rootDir>/src/main.{js,jsx,ts,tsx}',
     '!<rootDir>/src/module.alias.{js,jsx,ts,tsx}',
     '!<rootDir>/src/**/*.*spec.{js,jsx,ts,tsx}'
