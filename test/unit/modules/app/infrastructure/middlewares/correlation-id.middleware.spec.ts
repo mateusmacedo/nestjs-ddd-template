@@ -1,5 +1,5 @@
-import { CORRELATION_ID_KEY } from '@/infrastructure/constants/common.constant'
-import { CorrelationIdMiddleware } from '@/infrastructure/middlewares/correlation-id.middleware'
+import { CORRELATION_ID_KEY } from '@/modules/app/infrastructure/constants/common.constant'
+import { CorrelationIdMiddleware } from '@/modules/app/infrastructure/middlewares/correlation-id.middleware'
 import { getMockReq, getMockRes } from '@jest-mock/express'
 import { Test } from '@nestjs/testing'
 import { NextFunction, Request, Response } from 'express'

@@ -1,5 +1,5 @@
-import { HealthController } from '@/infrastructure/controller/health.controller'
-import { HealthService } from '@/infrastructure/services/health.service'
+import { HealthController } from '@/modules/app/infrastructure/controller/http/health.controller'
+import { HealthService } from '@/modules/app/infrastructure/services/health.service'
 import { HealthCheckResult } from '@nestjs/terminus'
 import { Test, TestingModule } from '@nestjs/testing'
 import { mock } from 'jest-mock-extended'

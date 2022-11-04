@@ -1,4 +1,4 @@
-import { HealthService } from '@/infrastructure/services/health.service'
+import { HealthService } from '@/modules/app/infrastructure/services/health.service'
 import { Controller, Get } from '@nestjs/common'
 import { HealthCheck, HealthCheckResult } from '@nestjs/terminus'
 

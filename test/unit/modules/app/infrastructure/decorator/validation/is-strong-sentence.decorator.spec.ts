@@ -1,4 +1,4 @@
-import { IsStrongSentence } from '@/infrastructure/decorator/validation/is-strong-sentence.decorator'
+import { IsStrongSentence } from '@/modules/app/infrastructure/decorator/validation/is-strong-sentence.decorator'
 import { validate } from 'class-validator'
 
 describe('IsStrongSentence', () => {

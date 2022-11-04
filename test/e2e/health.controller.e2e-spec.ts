@@ -1,4 +1,4 @@
-import { CommonModule } from '@/infrastructure/modules/common.module'
+import { AppModule } from '@/modules/app/infrastructure/app.module'
 import { INestApplication } from '@nestjs/common'
 import { ConfigModule } from '@nestjs/config'
 import { Test, TestingModule, TestingModuleBuilder } from '@nestjs/testing'
@@ -10,13 +10,7 @@ describe('HealthController (e2e)', () => {
   let app: INestApplication
   beforeAll(async () => {
     const moduleBuilder: TestingModuleBuilder = Test.createTestingModule({
-      imports: [
-        ConfigModule.forRoot({
-          envFilePath: 'test.env',
-          cache: true
-        }),
-        CommonModule
-      ],
+      imports: [AppModule],
       controllers: [],
       providers: []
     })

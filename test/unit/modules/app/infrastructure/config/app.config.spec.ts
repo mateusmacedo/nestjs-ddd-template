@@ -1,4 +1,4 @@
-import { appConfig } from '@/infrastructure/config/app.config'
+import { appConfig } from '@/modules/app/infrastructure/config/app.config'
 import { ConfigModule, ConfigService } from '@nestjs/config'
 import { Test, TestingModuleBuilder } from '@nestjs/testing'
 

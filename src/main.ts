@@ -1,5 +1,5 @@
 import '@/module.alias'
-import { AppModule } from '@/infrastructure/modules/app.module'
+import { AppModule } from '@/modules/app/infrastructure/app.module'
 import { ClassSerializerInterceptor, ValidationPipe, VersioningType } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
 import { NestFactory, Reflector } from '@nestjs/core'

@@ -1,4 +1,4 @@
-import { IsEqualTo } from '@/infrastructure/decorator/validation/is-equal-to.decorator'
+import { IsEqualTo } from '@/modules/app/infrastructure/decorator/validation/is-equal-to.decorator'
 import { validate } from 'class-validator'
 
 describe('IsEqualToDecorator', () => {
