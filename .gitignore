@@ -39,3 +39,4 @@ lerna-debug.log*
 test.env
 docker/data/
 package-lock.json
+yarn.lock

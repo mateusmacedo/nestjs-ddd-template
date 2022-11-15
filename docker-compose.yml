@@ -1,13 +1,17 @@
 version: "3.7"
 services:
-  confirmation-code-api:
-    image: confirmation-code:latest
+  nest-ddd-template:
+    image: nest-ddd-template:latest
     build:
       context: .
       dockerfile: ./.setup/build/Dockerfile
-    container_name: confirmation-code-api
+    container_name: nest-ddd-template
     working_dir: /usr/src/app
-    command: ["npm", "run", "start:debug"]
+    env_file:
+      - .env.example
+    environment:
+      - NODE_ENV=production
+    # command: [ "npm", "run", "start:debug" ]
     expose:
       - 3000
       - 9229
